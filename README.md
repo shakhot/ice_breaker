@@ -15,3 +15,8 @@ langchain = "*"
 
 [requires]
 python_version = "3.10"
+
+# Important website for API_KEYS
+OPenAI
+https://nubela.co/proxycurl/dashboard/proxycurl-api/api-key/
+
