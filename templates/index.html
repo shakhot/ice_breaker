@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>My First Langchain Project</title>
+        <title>Ice Breaker</title>
         <link rel="stylesheet" href="https://unpkg.com/mvp.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@chgibb/css-spinners@2.2.1/css/spinner/three-quarters.min.css">
     </head>
@@ -10,6 +10,12 @@
         <header>
             <form id="name-form" style="margin: 0 auto">
                 <h1>Ice Breaker</h1>
+                <h3>Given the information about a person this app will use Langchain Agents to scrape the information from linkedin, and twitter posts to return below output:</h3>
+                <h5>    1. A short summary</h5>
+                <h5>    2. Two interesting facts about them.</h5>
+                <h5>    3. Three topics that might interest them.</h5>
+                <h5>    4. Two creative Ice breakers</h5>
+                
                 <input type="text" name="name" placeholder="Enter name">
                 <button id="magic-button" type="submit" class="center">Do Your Magic</button>
             </form>
@@ -61,8 +67,8 @@
                         document.getElementById("profile-pic").src = data.picture_url;
                         document.getElementById("summary").textContent = data.summary_and_facts.summary;
                         createHtmlList(document.getElementById("facts"), data.summary_and_facts.facts);
-<!--                        createHtmlList(document.getElementById("ice-breakers"), data.ice_breakers.ice_breakers);-->
-<!--                        createHtmlList(document.getElementById("topics-of-interest"), data.interests.topics_of_interest);-->
+                        createHtmlList(document.getElementById("ice-breakers"), data.ice_breakers.ice_breakers);
+                        createHtmlList(document.getElementById("topics-of-interest"), data.interests.topics_of_interest);
 
                         spinner.style.display = "none";
                         result.style.display = "";
